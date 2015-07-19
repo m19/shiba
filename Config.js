@@ -3,8 +3,8 @@ module.exports =
   {
     ENV:            process.env.NODE_ENV || 'development',
     VERSION:        require('./package.json').version,
-    GAMESERVER:     process.env.BUSTABIT_GAMESERVER || "https://nxt.tothemoon.me:443/game",
-    WEBSERVER:      process.env.BUSTABIT_WEBSERVER || "https://nxt.tothemoon.me",
+    GAMESERVER:     process.env.BUSTABIT_GAMESERVER || "https://btc.tothemoon.me:443/game",
+    WEBSERVER:      process.env.BUSTABIT_WEBSERVER || "https://btc.tothemoon.me",
     OXR_APP_ID:     process.env.OXR_APP_ID,
     SESSION:        process.env.SHIBA_SESSION || '',
     DATABASE:       process.env.DATABASE_URL_SHIBA || 'postgres://localhost/shibadb',
