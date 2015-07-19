@@ -115,7 +115,7 @@ module.exports =
         return val === 0;
       },
     clientSeed:
-      '000000000000000007a9a31ff7f07463d91af6b5454241d5faf282e5e0fe1b3a',
+      '00000000000000000582aead0f4e0d43bdd7b7e00d168ee880875dc44d0d078a',
     crashPoint:
       function(serverSeed) {
         console.assert(typeof serverSeed === 'string');
@@ -126,7 +126,7 @@ module.exports =
             .digest('hex');
 
         // In 1 of 101 games the game crashes instantly.
-        if (this.divisible(hash, 101))
+        if (this.divisible(hash, 67))
           return 0;
 
         // Use the most significant 52-bit from the hash to calculate the crash point

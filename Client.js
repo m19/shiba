@@ -72,7 +72,9 @@ function Client(config) {
   this.config = config;
 
   debug("Setting up connection to %s", config.GAMESERVER);
-  this.socket = SocketIO(config.GAMESERVER);
+  this.socket = SocketIO(config.GAMESERVER, {
+    path: '/game/socket.io'
+  });
   this.socket.on('error', this.onError.bind(this));
   this.socket.on('err', this.onErr.bind(this));
   this.socket.on('connect', this.onConnect.bind(this));
