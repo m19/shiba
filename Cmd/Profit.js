@@ -36,7 +36,7 @@ Profit.prototype.handle = function*(client, msg, rawInput) {
     }
   }
 
-  let response = (result/100).toFixed(2) + ' bits';
+  let response = (result/1e8).toFixed(2) + ' NXT';
   client.doSay(response);
 };
 
